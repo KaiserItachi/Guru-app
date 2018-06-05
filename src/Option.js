@@ -20,7 +20,6 @@ class Option extends React.Component{
     }
 
     onSelect = (e)=>{
-        debugger;
         this.setState({
             selected : e.target.value
         })
