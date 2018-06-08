@@ -2,7 +2,7 @@ import React from 'react'
 
 const Question = function(){
     return (
-        <div>
+        <div className='Question'>
             <h1> Question No 1 </h1>
             </div>
     )
