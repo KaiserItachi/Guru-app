@@ -7,10 +7,10 @@ const Choice = function(props){
         <div>
         <label>
         <input type = 'radio' value = {props.id}
-        checked = {props.checked}
-        onChange = {props.onChange}
-        className = 'Option'/>
-        {props.value}
+            checked = {props.checked}
+            onChange = {props.onChange}
+            className = 'Option'/>
+            {props.value}
         </label>
         <br/>
         <br/>

@@ -11,8 +11,8 @@ const Choices = [
 
 
 class Option extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state = {
             selected: null
@@ -28,7 +28,7 @@ class Option extends React.Component{
     render(){
         return(
             <div>
-                {Choices.map((choice, i)=>{
+                {this.props.choices.map((choice, i)=>{
                     return(
                         <Choice id = {choice.id} 
                         value = {choice.value}

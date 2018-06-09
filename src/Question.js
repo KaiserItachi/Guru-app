@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Question = function(){
+const Question = function(props){
     return (
         <div className='Question'>
-            <h1> Question No 1 </h1>
+            <h1> {props.question} </h1>
             </div>
     )
 }
