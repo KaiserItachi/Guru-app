@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card';
-import getData from './data/Repo'
+import getData from './data/Repo';
+import StopWatch from './StopWatch';
 
 const Data = getData();
 
@@ -24,10 +25,14 @@ class App extends Component {
       })
     }
     else{
-      this.setState({
-        showResult: true
-      })
+      this.submitAnswer();
     }
+  }
+
+  submitAnswer = () => {
+    this.setState({
+      showResult: true
+    })
   }
 
   verifyAnswer = (id) => {
@@ -43,11 +48,14 @@ class App extends Component {
       
       <div className="App">
       {!this.state.showResult &&
+      <div>
         <Card question = {Data[this.state.index].Question}
         choices = {Data[this.state.index].Choices} 
         onClick = {this.onButtonClick}
         selected = {null}
         verifyAnswer = {this.verifyAnswer}/>
+        <StopWatch submitAnswer= {this.submitAnswer}/>
+        </div>
       }
       {this.state.showResult &&
         <div>
