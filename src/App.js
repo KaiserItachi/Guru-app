@@ -10,7 +10,8 @@ class App extends Component {
     super()
 
     this.state = {
-      index: 0
+      index: 0,
+      score: 0
     }
 
   }
@@ -23,12 +24,17 @@ class App extends Component {
     }
   }
 
+  verifyAnswer = () => {
+    
+  }
+
   render() {
     return (
       <div className="App">
         <Card question = {Data[this.state.index].Question}
         choices = {Data[this.state.index].Choices} 
-        onClick = {this.onButtonClick}/>
+        onClick = {this.onButtonClick}
+        selected = {null}/>
       </div>
     );
   }

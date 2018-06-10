@@ -7,8 +7,14 @@ export default class Card extends React.Component{
         super(props)
 
         this.state = {
-            selected: null
+            selected: this.props.selected
         }
+    }
+
+    componentWillReceiveProps(){
+        this.setState({
+            selected: null
+        })
     }
 
     onSelect = (e) => {

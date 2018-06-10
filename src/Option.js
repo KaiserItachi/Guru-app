@@ -8,7 +8,7 @@ import Choice from './Choice';
                 return(
                     <Choice id = {choice.id} 
                     value = {choice.value}
-                    checked = {props.selected === choice.id}
+                    checked = {props.selected == choice.id}
                     onChange = {props.onSelect}
                     key = {i}/>
                 )
