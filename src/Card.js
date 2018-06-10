@@ -25,6 +25,7 @@ export default class Card extends React.Component{
 
     onNext = ()=>{
         if(this.state.selected){
+            this.props.verifyAnswer(this.state.selected);
             this.props.onClick();
         }
         else{
