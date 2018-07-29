@@ -3,7 +3,7 @@ import Choice from './Choice';
 
  const Option =  function(props){
     return(
-        <div>
+        <div className="rad-option">
             {props.choices.map((choice, i)=>{
                 return(
                     <Choice id = {choice.id} 

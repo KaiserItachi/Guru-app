@@ -33,16 +33,16 @@ export default class Card extends React.Component{
         }
     }
 
-    render(props){
+    render(){
         return(
-            <div>
+            <div className="div-card">
                 <Question question = {this.props.question}/>
                 <Option
                     choices = {this.props.choices}
                     onSelect = {this.onSelect}
                     selected = {this.state.selected}
                 />
-                <button onClick = {this.onNext} >
+                <button className="btn-next" onClick = {this.onNext} >
                     Next
                     </button>
             </div>

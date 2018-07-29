@@ -28,8 +28,8 @@ export default class Stopwatch extends React.Component {
   
   render() {
     return (
-      <div>
-        <h1>{formattedSeconds(this.state.secondsElapsed)}</h1>
+      <div className="div-timer">
+        <h2>{formattedSeconds(this.state.secondsElapsed)}</h2>
       </div>
     );
   }
